@@ -13,8 +13,6 @@ export class ImagesDataService {
   constructor(private http: HttpClient) {}
 
   getImages(): Observable<any> {
-    console.log('uko');
-    
     return this.http.get(`${this.url}photos`).pipe(
       map((response) => response),
       catchError((e: any) => {
