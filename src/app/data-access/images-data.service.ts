@@ -13,8 +13,9 @@ export class ImagesDataService {
   constructor(private http: HttpClient) {}
 
   getImages(): Observable<any> {
-    return this.http.get(`${this.url}photos`).pipe(
-      map((response) => response),
+    return this.http.get(this.url + 'photos').pipe(
+      map((response) => console.log('findHttp', response)
+      ),
       catchError((e: any) => {
         throw new Error(e);
       })

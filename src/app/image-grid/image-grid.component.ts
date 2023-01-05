@@ -19,7 +19,7 @@ export class ImageGridComponent implements OnInit {
 
   fetchImages() {
     this.imagesData.getImages().subscribe((resp) => {
-      console.log('here', resp);
+      debugger
       this.dataImage = { ...resp };
     });
   }
